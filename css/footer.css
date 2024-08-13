@@ -1,0 +1,21 @@
+#footer{
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid lightgrey;
+}
+
+ #logo1{
+    font-size: 35px;
+    color: rgb(214, 65, 38);
+ }
+ #logo2{
+    font-size: 35px;
+    color: red;
+    margin-left: 10px;
+    margin-right: 10px;
+
+ }
+ #logo3{
+    font-size: 35px;
+    color: dodgerblue;
+ }

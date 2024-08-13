@@ -1,0 +1,55 @@
+#! Bu .gitignore dosyası, Node.js ve genel JavaScript projelerinde yaygın olarak kullanılan dosya ve klasörleri göz ardı eder.
+#! Kendi projenize özgü diğer dosya veya klasörleri de eklemeniz gerekebilir.
+
+# Node.js modüllerinin bulunduğu klasörü yok sayar
+node_modules/
+
+# Log dosyalarını yok sayar
+logs/
+*.log
+npm-debug.log*
+
+# Derleme çıktısını yok sayar
+dist/
+build/
+
+# Çeşitli işletim sistemi dosyalarını yok sayar
+.DS_Store
+Thumbs.db
+
+# IDE ve editör yapılandırma dosyalarını yok sayar
+.vscode/
+.idea/
+
+# Geçici dosyaları yok sayar
+temp/
+.tmp/
+
+# Test çıktısını yok sayar
+coverage/
+
+# Çevresel değişkenler dosyasını yok sayar
+.env
+
+# Paket yöneticisi kilit dosyalarını yok sayar
+package-lock.json
+yarn.lock
+
+# Webpack veya benzeri derleyici geçici dosyalarını yok sayar
+.cache/
+
+# Jest test çıktı dosyalarını yok sayar
+jest-html-reporters-*.html
+
+# MacOS spesifik dosyalarını yok sayar
+.DS_Store
+
+# Linux spesifik dosyalarını yok sayar
+*.swp
+
+# Windows spesifik dosyalarını yok sayar
+Thumbs.db
+ehthumbs.db
+
+# Tamamlanmamış download dosyalarını yok sayar
+*.crdownload

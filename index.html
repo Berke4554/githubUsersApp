@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Github Uygulaması</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/content.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!--! HEADER-ROW -->
+      <div id="headerRow" class="row mt-3 p-3">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <img id="githubLogo" src="img/github-mark.png" alt="" />
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8 mt-3">
+          <h4 id="headerTitle">Github Kullanıcılarını Arayınız</h4>
+        </div>
+      </div>
+
+      <!--! SEARCH-ROW -->
+      <div id="searchRow" class="row mt-2 p-3">
+        <div class="col-sm-12 col-md-12 col-lg-12 mt-3">
+          <form id="userSearchForm">
+            <input
+              id="userSearchBar"
+              type="text"
+              class="form-control"
+              placeholder="Github Kullanıcısı Arayın"
+            />
+            <div class="mt-3">
+              <!--* Veri Gönderme Yapacağımız İçin Submit dedik type'ına -->
+              <button style="width: 75px" class="btn btn-primary" type="submit">
+                Ara
+              </button>
+              <button
+                id="clear"
+                style="width: 75px"
+                class="btn btn-danger"
+                type="button"
+              >
+                Temizle
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--! PROFİLE ROW -->
+      <div id="profileContentRow" class="row mt-2 p-3" style="display: none">
+        <!-- 
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div id="profileDiv">
+            <img
+              id="profileImg"
+              class="mb-3"
+              src="img\channels4_profile.jpg"
+              width="200"
+              height="200"
+            />
+            <hr style="width: 200px" />
+            <span>Berke Karaali</span>
+            <span>Front End Developer</span>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-8 col-lg-8">
+          <div id="badgeDiv" class="mt-1">
+            <button type="button" class="btn btn-primary">
+              Takipçi <span class="badge text-bg-light">4</span>
+            </button>
+            <button type="button" class="btn btn-success">
+              Takip Edilen <span class="badge text-bg-light">4</span>
+            </button>
+            <button type="button" class="btn btn-secondary">
+              Repolar <span class="badge text-bg-light">4</span>
+            </button>
+          </div>
+          <div id="infoDiv" class="mt-3">
+            <div class="info m-3">
+              <img src="img/github-mark.png" width="40" height="40" />
+              <span>Jforce</span>
+            </div>
+            <div class="info m-3">
+              <img src="img/github-mark.png" width="40" height="40" />
+              <span>Manisa</span>
+            </div>
+            <div class="info m-3">
+              <img src="img/github-mark.png" width="40" height="40" />
+              <span>bkaraali18@gmail.com</span>
+            </div>
+            <div class="info m-3">
+              <a href="#">Repoları Göster</a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <!--! Table(Tablolar) -->
+      <div id="reposTable" class="row mt-3 p-3" style="display: none">
+        <table id="table" class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#No</th>
+              <th scope="col">Proje İsmi</th>
+              <th scope="col">Oluşturma Tarihi</th>
+            </tr>
+          </thead>
+          <tbody id="tableContent">
+            <!-- <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+
+      <!--! Son Aranan Kullanıcılar--Günün Sözü -->
+      <div id="searchedUserSection" class="row mt-3">
+        <!--* KOLON-1 -->
+        <div class="col-sm-12 col-md-6 col-lg-6 p-3">
+          <div class="d-flex gap-3 mt-2">
+            <h4>Son Arananlar</h4>
+            <button id="clearAll" type="button" class="btn btn-secondary">
+              Tümünü Temizle
+            </button>
+          </div>
+          <ul id="searchedUserList" class="list-group mt-4">
+            <!-- <li class="list-group-item">ali</li>
+            <li class="list-group-item">veli</li>
+            <li class="list-group-item">kırk</li>
+            <li class="list-group-item">dokuz</li>
+            <li class="list-group-item">elli</li> -->
+          </ul>
+        </div>
+
+        <!--* KOLON-2 -->
+        <div class="col-sm-12 col-md-6 col-lg-6 p-3">
+          <div id="todaysQuoteSection">
+            <div class="card" style="border: none">
+              <div class="card-body">
+                <h5 class="card-title">Günün Sözü</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--! FOOTER -->
+      <div id="footer" class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 text-center mt-4">
+          <h4>Bizimle İletişime Geçin</h4>
+          <div id="socialMedia">
+            <a href="https://www.instagram.com/"
+              ><i id="logo1" class="fa-brands fa-square-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com/"
+              ><i id="logo2" class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/berke-karaali-187650231/"
+              ><i id="logo3" class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/storage.js"></script>
+    <script src="js/github.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

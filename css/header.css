@@ -1,0 +1,22 @@
+
+
+#headerRow{
+    background-color: aliceblue;
+    border: 1px solid lightgrey;
+}
+
+#githubLogo{
+    width: 60px;
+    height: 60px;
+}
+
+#headerTitle{
+font-family:  monospace;
+}
+
+
+/* searchRow'a başka bir css eklentısı gelmeyecek diye ayrı sayfaya tanımlamadık */
+#searchRow{
+    background-color: aliceblue;
+    border: 1px solid lightgrey;
+}

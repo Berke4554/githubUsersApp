@@ -1,0 +1,42 @@
+#profileContentRow{
+    background-color: aliceblue;
+    border: 1px solid lightgrey;
+    
+}
+
+#profileDiv{
+    padding: 20px;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#profileImg{
+    border-radius: 50%;   
+}
+
+#reposTable{
+    background-color:#fff ;
+    border: 1px solid lightgrey;
+
+}
+
+#searchedUserSection{
+    background-color:#fff ;
+    border: 1px solid lightgrey;
+
+}
+
+#todaysQuoteSection{
+    background-color: #fff;
+    border: 1px solid lightgrey;
+    margin-top: 70px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
