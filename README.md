@@ -14,6 +14,14 @@ This application allows you to search for GitHub users and view their detailed i
 - List of public repositories 
 - Responsive design for seamless usage on various devices
 
+## Technologies Used
+
+- **JavaScript (JS)**: Used to create a dynamic user interface.
+- **Bootstrap**: Used as a CSS framework to provide a responsive design.
+- **CSS**: Used for styling and layout of the project.
+- **HTML**: Used for the structure and skeleton of the project.
+
+
 ## Demo
 
 Check out the live demo [here](https://main--usersearchgit.netlify.app/#).
