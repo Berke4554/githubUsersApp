@@ -45,11 +45,11 @@ class UI {
         </div>
         <div class="col-sm-12 col-md-8 col-lg-8">
           <!--* Butonlar -->
-          <div id="badgeDiv" class="mt-1">
+          <div id="badgeDiv" class="mt-2 mt-sm-2 gap-3">
             <button type="button" class="btn btn-primary">
               Takipçi <span class="badge text-bg-light">${user.followers}</span>
             </button>
-            <button type="button" class="btn btn-success">
+            <button type="button" class="my-2 my-sm-0 btn btn-success">
               Takip <span class="badge text-bg-light">${user.following}</span>
             </button>
             <button type="button" class="btn btn-secondary">
