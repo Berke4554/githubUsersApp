@@ -24,6 +24,6 @@ This application allows you to search for GitHub users and view their detailed i
 
 ## Demo
 
-Check out the live demo [here](https://main--usersearchgit.netlify.app/#).
+Check out the live demo [here](https://main--usersearchgit.netlify.app/).
 
 
